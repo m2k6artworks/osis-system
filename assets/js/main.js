@@ -116,14 +116,14 @@
 
   // Toggle .header-scrolled class to #header when page is scrolled
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 50) {
       $('#header').addClass('header-scrolled');
     } else {
       $('#header').removeClass('header-scrolled');
     }
   });
 
-  if ($(window).scrollTop() > 100) {
+  if ($(window).scrollTop() > 50) {
     $('#header').addClass('header-scrolled');
   }
 
@@ -390,3 +390,16 @@
   });
 
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function () {
+  var stepper = new Stepper(document.querySelector('.bs-stepper'), 
+    {
+      linear: false,
+      animation: true,
+      selectors: {
+        steps: '.step',
+        trigger: '.step-trigger',
+        stepper: '.bs-stepper'
+      }
+    })
+})

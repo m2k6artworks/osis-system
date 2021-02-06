@@ -10,14 +10,19 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <meta name="msapplication-TileImage" content="assets/img/android-chrome-192x192.png">
+  <meta property="og:image:secure_url" content="assets/img/android-chrome-192x192.png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bs-stepper/bs-stepper.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -43,13 +48,20 @@
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-      <div class="mr-5 mr-xs-auto"></div>
+      <div class="mr-5 mr-xs-auto d-flex d-md-none"></div>
 
-      <div class="logo ml-auto mr-auto ml-md-0 mr-md-auto">
-        <h1 class="text-light"><a href="/"><span>OSIS</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo-smk-pgri-rgj.jpg" alt="logo smk pgri" class="img-fluid" 
-          style="width: auto; height: 50px; object-fit: contain;"></a> -->
+      <div class="logo ml-auto mr-auto ml-md-0 mr-md-auto d-flex text-center text-md-left">
+        <a href="index.html" class="d-none d-md-flex m-auto">
+          <img src="assets/img/logo-smk-pgri-rgj.png" alt="logo smk pgri" class="img-fluid m-auto" style="width: 50px;height: 50px;object-fit: contain;object-position: center;">
+        </a>
+        <div class="m-auto d-flex flex-column">
+          <h1 class="text-light">
+            <a href="index.html">
+              <span>SINOPSIS</span>
+            </a>
+          </h1>
+          <span style="font-size: .825rem;" class="d-none d-md-flex">Sistem Informasi Pengelolaan OSIS</span>
+        </div>
       </div>
 
       <div class="ml-xs-2 ml-sm-4 d-block d-md-none">
@@ -96,7 +108,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-          <img src="assets/img/team_spirit_red.svg" class="img-fluid animated" alt="">
+          <img src="assets/img/new-teaching.svg" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -227,7 +239,7 @@
 
         <div class="section-title col-12 col-xl-8 px-0 m-auto" data-aos="fade-up">
           <h2><span class="mx-2">Pendaftaran</span></h2>
-          <p>Pantau data pendaftaran anggota baru</p>
+          <p>Informasi mengenai pendaftaran anggota baru</p>
         </div>
 
         <div class="row">
@@ -284,6 +296,62 @@
             </div>
             <!-- End .content-->
           </div>
+          <hr class="col-12">
+          <h3 class="mx-auto mt-4">Alur Pendaftaran</h3>
+          <div class="bs-stepper col-12 mt-3 mx-auto">
+            <div class="bs-stepper-header d-flex flex-wrap justify-content-center" role="tablist">
+              <div class="step" data-target="#step-1">
+                <button type="button" class="step-trigger d-flex flex-column" role="tab" aria-controls="step-1" id="step-1-trigger">
+                  <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-label d-none d-lg-block">Isi form pendaftaran</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#step-2">
+                <button type="button" class="step-trigger d-flex flex-column" role="tab" aria-controls="step-2" id="step-2-trigger">
+                  <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-label d-none d-lg-block">Tunggu pengumuman</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#step-3">
+                <button type="button" class="step-trigger d-flex flex-column" role="tab" aria-controls="step-3" id="step-3-trigger">
+                  <span class="bs-stepper-circle">3</span>
+                  <span class="bs-stepper-label d-none d-lg-block">Izin orang tua</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#step-4">
+                <button type="button" class="step-trigger d-flex flex-column" role="tab" aria-controls="step-4" id="step-4-trigger">
+                  <span class="bs-stepper-circle">4</span>
+                  <span class="bs-stepper-label d-none d-lg-block">Selamat bergabung!</span>
+                </button>
+              </div>
+            </div>
+            <div class="bs-stepper-content">
+              <div id="step-1" class="content m-auto" role="tabpanel" aria-labelledby="step-1-trigger">
+                <h6 class="my-4 text-center">Klik tombol "Gabung Sekarang", lalu kamu akan diarahkan ke form pendaftaran</h6>
+              </div>
+              <div id="step-2" class="content" role="tabpanel" aria-labelledby="step-2-trigger">
+                <h6 class="my-4 text-center">
+                  Setelah mengisi form pendaftaran, pengurus akan menseleksi terlebih dahulu.
+                  Pengumuman diterima dapat dilihat pada dashboard profile kamu
+                </h6>
+              </div>
+              <div id="step-3" class="content" role="tabpanel" aria-labelledby="step-3-trigger">
+                <h6 class="my-4 text-center">
+                  Jika kamu diterima, isi form persetujuan orang tua dengan cara click tombol bertuliskan 
+                  "Form Persetujuan"
+                </h6>
+              </div>
+              <div id="step-4" class="content" role="tabpanel" aria-labelledby="step-4-trigger">
+                <h6 class="my-4 text-center">
+                  Setelah mendapat izin orang tua, selamat kamu telah bergabung pada OSIS
+                </h6>
+              </div>
+            </div>
+          </div>
+          
         </div>
 
       </div>
@@ -364,9 +432,15 @@
             <div class="event-card" data-aos="fade-up" data-aos-delay="100">
               <div class="event-img">
                 <iframe class="embed-responsive" width="540" height="300" src="https://www.youtube.com/embed/N40bjBIB8ck"
-                  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/N40bjBIB8ck?autoplay=1><img src=https://img.youtube.com/vi/N40bjBIB8ck/hqdefault.jpg alt='Pelantikan Anggota OSIS 2020'><span>▶</span></a>"
+                  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                    <a href=https://www.youtube.com/embed/N40bjBIB8ck?autoplay=1>
+                      <img style='object-fit: cover; object-position: center; width: 100%; height: 100%;' 
+                      src=https://img.youtube.com/vi/N40bjBIB8ck/hqdefault.jpg alt='Pelantikan Anggota OSIS 2020'>
+                      <span>▶</span>
+                    </a>"
                   frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
-                  allowfullscreen title="Pelantikan Anggota OSIS 2020"></iframe>
+                  allowfullscreen title="Pelantikan Anggota OSIS 2020">
+                </iframe>
                 <!-- <iframe width="540" class="embed-responsive" height="300" src="https://www.youtube.com/embed/N40bjBIB8ck" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" allowfullscreen></iframe> -->
               </div>
               <div class="event-info p-4 text-center">
@@ -380,9 +454,15 @@
             <div class="event-card" data-aos="fade-up" data-aos-delay="100">
               <div class="event-img">
                 <iframe class="embed-responsive" width="540" height="300" src="https://www.youtube.com/embed/EOlSglpS-rQ"
-                  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/EOlSglpS-rQ?autoplay=1><img src=https://img.youtube.com/vi/EOlSglpS-rQ/hqdefault.jpg alt='Pelantikan Anggota OSIS 2020'><span>▶</span></a>"
+                  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                    <a href=https://www.youtube.com/embed/EOlSglpS-rQ?autoplay=1>
+                      <img style='object-fit: cover; object-position: center; width: 100%; height: 100%;' 
+                      src=https://img.youtube.com/vi/EOlSglpS-rQ/hqdefault.jpg alt='Pelantikan Anggota OSIS 2020'>
+                      <span>▶</span>
+                    </a>"
                   frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
-                  allowfullscreen title="Pelantikan Anggota OSIS 2020"></iframe>
+                  allowfullscreen title="Pelantikan Anggota OSIS 2020">
+                </iframe>
               </div>
               <div class="event-info p-4 text-center">
                 <h4>Pelantikan Anggota OSIS 2020</h4>
@@ -395,9 +475,15 @@
             <div class="event-card" data-aos="fade-up" data-aos-delay="100">
               <div class="event-img">
                 <iframe class="embed-responsive" width="540" height="300" src="https://www.youtube.com/embed/dijCs9XEm5I"
-                  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/dijCs9XEm5I?autoplay=1><img src=https://img.youtube.com/vi/dijCs9XEm5I/hqdefault.jpg alt='Pelantikan Anggota OSIS 2020'><span>▶</span></a>"
+                  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style>
+                    <a href=https://www.youtube.com/embed/dijCs9XEm5I?autoplay=1>
+                      <img style='object-fit: cover; object-position: center; width: 100%; height: 100%;' 
+                      src=https://img.youtube.com/vi/dijCs9XEm5I/hqdefault.jpg alt='Pelantikan Anggota OSIS 2020'>
+                      <span>▶</span>
+                    </a>"
                   frameborder="0" allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
-                  allowfullscreen title="Pelantikan Anggota OSIS 2020"></iframe>
+                  allowfullscreen title="Pelantikan Anggota OSIS 2020">
+                </iframe>
               </div>
               <div class="event-info p-4 text-center">
                 <h4>Pelantikan Anggota OSIS 2020</h4>
@@ -796,6 +882,7 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/bs-stepper/bs-stepper.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>

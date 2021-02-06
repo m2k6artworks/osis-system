@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0 10px 10px 0;
   padding: 10px 0;
   height: 100%;
-  width: 42vmax;
+  width: 40vmax;
 }
 
 .mobile-nav * {
@@ -639,6 +639,10 @@ section {
   font-size: 1.625rem;
 }
 
+.about .section-title p {
+  font-size: .9rem;
+}
+
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -738,6 +742,11 @@ section {
   font-size: .875rem;
   color: #484848;
 }
+
+.counts .bs-stepper .active .bs-stepper-circle { background-color:var(--prime-red); }
+
+.counts .bs-stepper .step-trigger:focus,
+.counts .bs-stepper .active button { color: var(--sec-red); }
 
 /* .counts .content .count-box a {
   font-weight: 600;
@@ -954,7 +963,7 @@ section {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 1.125rem;
-  color: var(--prime-red);
+  color: var(--sec-red);
 }
 
 .event .event-info p {
@@ -1766,3 +1775,43 @@ section {
 /*--------------------------------------------------------------
 Responsive
 --------------------------------------------------------------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 200px) {
+  :root { font-size: 14px; }
+}
+
+@media only screen and (min-width: 576px) {
+  /* :root { font-size: 12px; } */
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  /* :root { font-size: 13px; } */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* :root { font-size: 14px; } */
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  :root { font-size: 15px; }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  :root { font-size: 16px; }
+}
+
+@media (min-width: 768px) {
+  #header .container {
+      max-width: 100pxpx;
+  }
+}
+
+@media (min-width: 576px) {
+  #header .container {
+    max-width: 1000px;
+  }
+}
